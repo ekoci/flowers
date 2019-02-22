@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>New flower bucket</h2>
+<mat-dialog-content class="mat-typography">
+  <div fxLayout="column">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Name" [(ngModel)]="username" name="userName" required #userName="ngModel" >
+      <mat-error>Username is required</mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Price" [(ngModel)]="username" name="userName" required #userName="ngModel" >
+      <mat-error>Username is required</mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="info" [(ngModel)]="username" name="userName" required #userName="ngModel" >
+      <mat-error>Username is required</mat-error>
+    </mat-form-field>
+  </div>
+
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Add</button>
+</mat-dialog-actions>

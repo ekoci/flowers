@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
+    <div class="sidebar-wrapper">
+      <div class="logo">
+        <a class="simple-text">
+          Creative  <mat-icon aria-label="Example icon-button with a heart icon">local_florist</mat-icon>
+        </a>
+      </div>
+      <ul class="nav">
+        <li routerLinkActive="active">
+          <a [routerLink]="'general'" class="nav-link">General</a>
+        </li>
+        <li routerLinkActive="active">
+          <a [routerLink]="'orders'" class="nav-link">Orders</a>
+        </li>
+        <li routerLinkActive="active">
+          <a [routerLink]="'contact'" class="nav-link">Contact</a>
+        </li>
+        <li routerLinkActive="active">
+          <a [routerLink]="'sales'" class="nav-link">Sales</a>
+        </li>
+        <li routerLinkActive="active">
+          <a [routerLink]="'salespeople'" class="nav-link">Salespeople</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="main-panel">
+    <app-toolbar></app-toolbar>
+    <router-outlet></router-outlet>
+  </div>
+</div>
