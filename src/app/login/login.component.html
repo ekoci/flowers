@@ -1,159 +1,59 @@
-<!--
-<div class="container"  fxLayout="row" fxLayoutAlign="space-around center">
-      <div fxLayout="column" fxLayoutAlign="space-around center" fxFlex="80">
-          <div style="width:100%; height: 100%" >
-          <img
-            src="https://images.unsplash.com/photo-1533467915241-eac02e856653?ixlib=rb-0.3.5&s=5a355bc035d9fd2297e68804e4fdb433&w=1000&q=80"
-            alt="foto"
-            class="img-responsive"
-            style="width:100%; height: 100%">
+
+
+
+  <div class="login-page" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="login-content" fxFlex="75" fxFill>
+      <div class="login-description" fxLayout="column" fxLayoutAlign="start start" >
+        <div class="logo">
+        </div>
+        <div class="login-text">
+          emri i kompanise
+        </div>
+        <div class="login-description">
+          Prshkrimi
         </div>
       </div>
-  <div fxFlex="20">
-    <form style="width:100%">
-      <div fxLayout="column" fxLayoutAlign="space-around center"  >
-      <div *ngIf="!register">
-        <h2>Login</h2>
-        <div>
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Username" [(ngModel)]="username" name="userName" required #userName="ngModel" >
-            <mat-error>Username is required</mat-error>
+      </div>
+
+
+      <div fxFlex="25" fxFill class="login-form" fxLayout="column" fxLayoutAlign="start start">
+        <div fxFlex="20" fxFill>
+          Log in to your account
+        </div>
+        <div  fxFlex="35" fxFill  fxLayout="column">
+
+
+            <mat-form-field>
+              <input matInput placeholder="Username">
+            </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Password">
           </mat-form-field>
-        </div>
-        <div>
-          <mat-form-field class="example-full-width" >
-            <input matInput placeholder="Password"  [(ngModel)]="password" name="password" required type="password">
-          </mat-form-field>
-        </div>
-      </div>
-        <div *ngIf="register">
-          <h2>Register</h2>
-          <div>
-            <mat-form-field class="example-full-width">
-              <input matInput placeholder="User Name" >
-            </mat-form-field>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <div fxFlex="50">
+            <mat-checkbox>Remember me!</mat-checkbox>
           </div>
-          <div>
-            <mat-form-field class="example-full-width">
-              <input matInput placeholder="E-mail" >
-            </mat-form-field>
-          </div>
-          <div>
-            <mat-form-field class="example-full-width">
-              <input matInput placeholder="Password">
-            </mat-form-field>
-          </div>
-          <div>
-            <mat-form-field class="example-full-width">
-              <input matInput placeholder="RePassword">
-            </mat-form-field>
-          </div>
+         <div fxFlex="50" style="text-align: right">
+           <span class="forgot-label">Forgot password?</span>
+         </div>
+
         </div>
-      <div fxLayout="row" fxLayoutAlign="space-around center"  >
-        <div fxFlex="50%">
-          <button mat-stroked-button color="primary" (click)="onLogin()">Login</button>
+          <button mat-button>Log in </button>
         </div>
-        <div  fxFlex="50%">
-          <button mat-stroked-button color="accent" (click)="onRegister()">Register</button>
+        <div style="background-color: blue" fxFlex="35" fxFill>
+
         </div>
-      </div>
-      </div>
+        <div style="background-color: red" fxFlex="35" fxFill>
 
-    </form>
-  </div>
-</div>
--->
-
-<!-- <section class="login-block">
-  <div class="container">
-
-    <div  class="content">
-
-      <div fxLayout="row">
-        <div fxLayout="column">
-          <form >
-            <div fxLayout="column" fxLayoutAlign="space-around center"  >
-              <div *ngIf="!register">
-                <h2  class="text-center">Login</h2>
-                <div>
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Username" [(ngModel)]="username" name="userName" required #userName="ngModel" >
-                    <mat-error>Username is required</mat-error>
-                  </mat-form-field>
-                </div>
-                <div>
-                  <mat-form-field class="example-full-width" >
-                    <input matInput placeholder="Password"  [(ngModel)]="password" name="password" required type="password">
-                    <mat-error>Password is required</mat-error>
-                  </mat-form-field>
-                </div>
-              </div>
-              <div *ngIf="register">
-                <h2  class="text-center">Register</h2>
-                <div>
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="User Name" >
-                  </mat-form-field>
-                </div>
-                <div>
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="E-mail" >
-                  </mat-form-field>
-                </div>
-                <div>
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Password">
-                  </mat-form-field>
-                </div>
-                <div>
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="RePassword">
-                  </mat-form-field>
-                </div>
-              </div>
-
-              <div fxLayout="row" fxLayoutAlign="space-around center" style="marigin-top:30px">
-                <div fxFlex="50%">
-                  <button mat-stroked-button color="primary" (click)="onLogin()">Login</button>
-                </div>
-                <div  fxFlex="50%">
-                  <button mat-stroked-button color="accent" (click)="onRegister()">Register</button>
-                </div>
-              </div>
-            </div>
-
-          </form>
-        </div >
+        </div>
 
 
-        <div fxLayout="column" style="padding-left: 50px">
-          <div class="carousel">
-            <div class="carousel-item active">
-              <img
-                src="https://images.homedepot-static.com/productImages/d51e274c-e719-46f4-a0ad-7c2785b0e07a/svn/van-zyverden-flower-bulbs-21597-64_1000.jpg"
-                alt="foto"
-                class="img-responsive"
-                style="width: 100%; height: 500px;">
-              <div class="carousel-caption d-none d-md-block">
-                <div class="banner-text">
-                  <h2>This is app</h2>
-                  <p>The best flower</p>
-                </div>
-              </div>
-            </div>
 
-          </div>
-        </div >
-      </div>
-    </div>
+        </div>
 
 
-    </div>
-</section>-->
 
-  <div class="form" fxlayout="column" fxlayoutalign="center center">
-    <div id="login-form">
-    </div>
   </div>
 
 
