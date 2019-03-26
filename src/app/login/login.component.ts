@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import {LoginService} from '../login.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  providers: [LoginService]
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private loginService : LoginService) { }
   register = false;
   username = '';
   password = '';
+  result = false;
 
   ngOnInit() {
   }
@@ -21,12 +23,12 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
-    this.register = false;
-    if (this.username === '' && this.password === '') {
-      this.router.navigateByUrl('/login');
-    } else {
-      this.router.navigateByUrl('/home/general');
-    }
+      this.result = this.loginService.logStatus(this.username, this.password);
+      if (this.result) {
+        this.router.navigateByUrl('/home/general');
+      } else {
+        this.router.navigateByUrl('/login');
+      }
 
   }
 }

@@ -10,7 +10,7 @@
           emri i kompanise
         </div>
         <div class="login-description">
-          Prshkrimi
+          Pershkrimi
         </div>
       </div>
       </div>
@@ -24,11 +24,11 @@
 
 
             <mat-form-field>
-              <input matInput placeholder="Username">
+              <input matInput placeholder="Username" [(ngModel)]="username">
             </mat-form-field>
 
           <mat-form-field>
-            <input matInput placeholder="Password">
+            <input matInput placeholder="Password" [(ngModel)]="password">
           </mat-form-field>
         <div fxLayout="row" fxLayoutAlign="space-between center">
           <div fxFlex="50">
@@ -39,7 +39,7 @@
          </div>
 
         </div>
-          <button mat-button>Log in </button>
+          <button mat-button (click)="onLogin(username, password)"> Log in </button>
         </div>
         <div style="background-color: blue" fxFlex="35" fxFill>
 
