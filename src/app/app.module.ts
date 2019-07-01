@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {ScrollDispatchModule} from '@angular/cdk/scrolling';
+import { ChartsModule } from 'ng2-charts';
 import {
   MatInputModule,
   MatListModule,
@@ -55,6 +56,7 @@ import {ToolbarComponent} from './toolbar/toolbar.component';
 import {OrdersComponent} from './all-data/orders/orders.component';
 import {ContactsComponent} from './all-data/contacts/contacts.component';
 import {ItemDialogComponent} from './all-data/general/item-dialog/item-dialog.component';
+import {SalespeopleComponent} from './all-data/salespeople/salespeople.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,6 +67,7 @@ import {ItemDialogComponent} from './all-data/general/item-dialog/item-dialog.co
     OrdersComponent,
     ContactsComponent,
     ItemDialogComponent,
+    SalespeopleComponent,
     FileSelectDirective
 
   ],
@@ -117,7 +120,8 @@ import {ItemDialogComponent} from './all-data/general/item-dialog/item-dialog.co
     MatTooltipModule,
     MatTreeModule,
     SidebarModule.forRoot(),
-    ScrollDispatchModule
+    ScrollDispatchModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

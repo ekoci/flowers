@@ -5,6 +5,7 @@ import {HomeComponent} from './home/home.component';
 import {AllDataComponent} from './all-data/general/general.module';
 import {OrdersComponent} from './all-data/orders/orders.component';
 import {ContactsComponent} from './all-data/contacts/contacts.component';
+import {SalespeopleComponent} from './all-data/salespeople/salespeople.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -12,7 +13,9 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent, children: [
       { path: 'general', component: AllDataComponent},
       { path: 'orders', component: OrdersComponent},
-      { path: 'contact', component:  ContactsComponent}]
+      { path: 'contact', component:  ContactsComponent},
+      { path: 'sales', component: OrdersComponent},
+      { path: 'salespeople', component:  SalespeopleComponent}]
      },
 
 ];

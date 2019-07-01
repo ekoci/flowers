@@ -10,6 +10,8 @@ import {LoginService} from '../login.service';
 export class LoginComponent implements OnInit {
 
   constructor(private router: Router, private loginService : LoginService) { }
+
+
   register = false;
   username = '';
   password = '';
@@ -20,6 +22,7 @@ export class LoginComponent implements OnInit {
 
   onRegister() {
     this.register = true;
+    console.log('enxhi', this.username)
   }
 
   onLogin() {
