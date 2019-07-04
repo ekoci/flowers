@@ -1,57 +1,57 @@
 
-<div class="login-page" fxLayout="row" fxLayoutAlign="space-between center">
-    <div class="login-content" fxFlex="75" fxFill>
-      <div class="login-description" fxLayout="column" fxLayoutAlign="start start" >
-        <div class="logo">
-        </div>
-        <div class="login-text">
-          emri i kompanise
-        </div>
-        <div class="login-description">
-          Pershkrimi
-        </div>
-      </div>
-      </div>
+<div class="login-page">
+<!--    <div class="login-content" fxFlex="75" fxFill>-->
+<!--      <div class="login-description" fxLayout="column" fxLayoutAlign="start start" >-->
+<!--        <div class="logo">-->
+<!--        </div>-->
+<!--        <div class="login-text">-->
+<!--          emri i kompanise-->
+<!--        </div>-->
+<!--        <div class="login-description">-->
+<!--          Pershkrimi-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      </div>-->
 
 
-      <div fxFlex="25" fxFill class="login-form" fxLayout="column" fxLayoutAlign="start start">
-        <div fxFlex="20" fxFill>
-          Log in to your account
-        </div>
-        <div  fxFlex="35" fxFill  fxLayout="column">
+<!--      <div fxFlex="25" fxFill class="login-form" fxLayout="column" fxLayoutAlign="start start">-->
+<!--        <div fxFlex="20" fxFill>-->
+<!--          Log in to your account-->
+<!--        </div>-->
+<!--        <div  fxFlex="35" fxFill  fxLayout="column">-->
 
 
-            <mat-form-field>
-              <input matInput placeholder="Username" [(ngModel)]="username">
-            </mat-form-field>
+<!--            <mat-form-field>-->
+<!--              <input matInput placeholder="Username" [(ngModel)]="username">-->
+<!--            </mat-form-field>-->
 
-          <mat-form-field>
-            <input matInput placeholder="Password" [(ngModel)]="password">
-          </mat-form-field>
-        <div fxLayout="row" fxLayoutAlign="space-between center">
-          <div fxFlex="50">
-            <mat-checkbox>Remember me!</mat-checkbox>
-          </div>
-         <div fxFlex="50" style="text-align: right">
-           <span class="forgot-label">Forgot password?</span>
-         </div>
+<!--          <mat-form-field>-->
+<!--            <input matInput placeholder="Password" [(ngModel)]="password">-->
+<!--          </mat-form-field>-->
+<!--        <div fxLayout="row" fxLayoutAlign="space-between center">-->
+<!--          <div fxFlex="50">-->
+<!--            <mat-checkbox>Remember me!</mat-checkbox>-->
+<!--          </div>-->
+<!--         <div fxFlex="50" style="text-align: right">-->
+<!--           <span class="forgot-label">Forgot password?</span>-->
+<!--         </div>-->
 
-        </div>
-          <button mat-button (click)="onLogin(username, password)"> Log in </button>
-        </div>
-        <div style="background-color: blue" fxFlex="35" fxFill>
+<!--        </div>-->
+<!--          <button mat-button (click)="onLogin(username, password)"> Log in </button>-->
+<!--        </div>-->
+<!--        <div style="background-color: blue" fxFlex="35" fxFill>-->
 
-        </div>
-        <div style="background-color: red" fxFlex="35" fxFill>
+<!--        </div>-->
+<!--        <div style="background-color: red" fxFlex="35" fxFill>-->
 
-        </div>
-
-
-
-        </div>
+<!--        </div>-->
 
 
 
+<!--        </div>-->
+
+<app-header></app-header>
+<app-content></app-content>
   </div>
 
 

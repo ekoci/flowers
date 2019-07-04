@@ -16,6 +16,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {no: 1, name: 'X', info: '1.0079', price: 1, discount: 1, createdate: '19.10.2018', img: 'assets/photo/flower1.jpg', status: false},
   {no: 2, name: 'X', info: '1.0079', price: 1, discount: 1, createdate: '19.10.2018', img: 'assets/photo/flower2.jpg', status: false},
   {no: 3, name: 'X', info: '1.0079', price: 1, discount: 1, createdate: '19.10.2018', img: 'assets/photo/flower3.jpg', status: true},
+  {no: 3, name: 'X', info: '1.0079', price: 1, discount: 1, createdate: '19.10.2018', img: 'assets/photo/flower3.jpg', status: true},
+  {no: 3, name: 'X', info: '1.0079', price: 1, discount: 1, createdate: '19.10.2018', img: 'assets/photo/flower3.jpg', status: true},
+  {no: 3, name: 'X', info: '1.0079', price: 1, discount: 1, createdate: '19.10.2018', img: 'assets/photo/flower3.jpg', status: true},
+  {no: 3, name: 'X', info: '1.0079', price: 1, discount: 1, createdate: '19.10.2018', img: 'assets/photo/flower3.jpg', status: true},
+  {no: 3, name: 'X', info: '1.0079', price: 1, discount: 1, createdate: '19.10.2018', img: 'assets/photo/flower3.jpg', status: true},
 ]
 
 @Component({

@@ -57,6 +57,8 @@ import {OrdersComponent} from './all-data/orders/orders.component';
 import {ContactsComponent} from './all-data/contacts/contacts.component';
 import {ItemDialogComponent} from './all-data/general/item-dialog/item-dialog.component';
 import {SalespeopleComponent} from './all-data/salespeople/salespeople.component';
+import { HeaderComponent } from './login/header/header.component';
+import { ContentComponent } from './login/content/content.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,8 +70,9 @@ import {SalespeopleComponent} from './all-data/salespeople/salespeople.component
     ContactsComponent,
     ItemDialogComponent,
     SalespeopleComponent,
-    FileSelectDirective
-
+    FileSelectDirective,
+    HeaderComponent,
+    ContentComponent
   ],
   entryComponents: [
     ItemDialogComponent

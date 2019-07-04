@@ -1,50 +1,51 @@
-<div fxLayout="column" fxLayoutAlign="space-around center" style="margin-top:50px"  fxLayout.lt-sm="column" >
-  <div  fxLayout="row" fxLayoutAlign="space-around center" fxFlex="50"   fxLayout.lt-sm="row">
-    <div  *ngFor="let data of alldata; let i = index" >
-     <mat-card class="example-card">
-     <mat-card-content>
-       <div>
-         <img mat-card-image [src]="data.img" alt="Photo of a Shiba Inu">
-       </div>
 
-     </mat-card-content>
+<div class="page-layout simple left-sidenav inner-sidenav">
+  <div fxLayout="column" fxLayoutAlign="space-around center" style="margin-top:50px"  fxLayout.lt-sm="column" >
+    <div  fxLayout="row" fxLayoutAlign="space-around center" fxFlex="50"   fxLayout.lt-sm="row">
+      <div  *ngFor="let data of alldata; let i = index">
+        <mat-card class="example-card">
+          <mat-card-content>
+            <img mat-card-md-image [src]="data.img" alt="Photo of a Shiba Inu">
+          </mat-card-content>
 
-    <mat-card-content>
-      <p>
-        No: {{data.no}}
-      </p>
-      <p>
-        Name: {{data.name}}
-      </p>
-      <p>
-        Price: {{data.price}}
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-icon-button (click)="addToMobile(data.no)" >
-        <mat-icon aria-label="Example icon-button with a heart icon" style="color: #6d7fcc;" *ngIf="data.status"   matTooltip="Add to online shop">add_shopping_cart</mat-icon>
+          <mat-card-content>
+            <p>
+              No: {{data.no}}
+            </p>
+            <p>
+              Name: {{data.name}}
+            </p>
+            <p>
+              Price: {{data.price}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-icon-button (click)="addToMobile(data.no)" >
+              <mat-icon aria-label="Example icon-button with a heart icon" style="color: #6d7fcc;" *ngIf="data.status"   matTooltip="Add to online shop">add_shopping_cart</mat-icon>
 
-        <mat-icon aria-label="Example icon-button with a heart icon" style="color: #6dccb6;" *ngIf="!data.status"   matTooltip="Remove from online shop">done_all</mat-icon>
-      </button>
+              <mat-icon aria-label="Example icon-button with a heart icon" style="color: #6dccb6;" *ngIf="!data.status"   matTooltip="Remove from online shop">done_all</mat-icon>
+            </button>
 
-      <button mat-icon-button matTooltip="Edit" (click)="openDialog()">
-        <mat-icon aria-label="Example icon-button with a heart icon" style="color: #6d7fcc;">edit</mat-icon>
-      </button>
-      <button mat-icon-button  matTooltip="Info">
-        <mat-icon aria-label="Example icon-button with a heart icon" style="color: #6d7fcc;">info</mat-icon>
-      </button>
-      <button mat-icon-button (click)="deletebucket(data.no)"  matTooltip="Delete">
-        <mat-icon aria-label="Example icon-button with a heart icon" style="color: #de3e46;">delete_forever</mat-icon>
-      </button>
+            <button mat-icon-button matTooltip="Edit" (click)="openDialog()">
+              <mat-icon aria-label="Example icon-button with a heart icon" style="color: #6d7fcc;">edit</mat-icon>
+            </button>
+            <button mat-icon-button  matTooltip="Info">
+              <mat-icon aria-label="Example icon-button with a heart icon" style="color: #6d7fcc;">info</mat-icon>
+            </button>
+            <button mat-icon-button (click)="deletebucket(data.no)"  matTooltip="Delete">
+              <mat-icon aria-label="Example icon-button with a heart icon" style="color: #de3e46;">delete_forever</mat-icon>
+            </button>
 
-    </mat-card-actions>
-    </mat-card>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+
+    <button mat-fab style="position: absolute;bottom: 12px;right: 12px;padding: 0;z-index: 99; background:#6d7fcc" (click)="openDialog()">
+      <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
+    </button>
   </div>
-  </div>
-
-  <button mat-fab style="position: absolute;bottom: 12px;right: 12px;padding: 0;z-index: 99; background:#6d7fcc" (click)="openDialog()">
-    <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
-  </button>
 </div>
+
 
 

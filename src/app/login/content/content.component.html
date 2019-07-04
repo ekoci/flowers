@@ -1,0 +1,18 @@
+<mat-grid-list cols="4" rowHeight="500px">
+  <mat-grid-tile
+    *ngFor="let tile of tiles"
+    [colspan]="tile.cols"
+    [rowspan]="tile.rows"
+    [style.background]="tile.color">
+<!--    {{tile.text}}-->
+<!--    test-->
+
+    <div style="width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    margin: 20px;
+    border: 1px solid;">
+
+    </div>
+  </mat-grid-tile>
+
+</mat-grid-list>
