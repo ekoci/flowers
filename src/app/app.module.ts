@@ -59,6 +59,8 @@ import {ItemDialogComponent} from './all-data/general/item-dialog/item-dialog.co
 import {SalespeopleComponent} from './all-data/salespeople/salespeople.component';
 import { HeaderComponent } from './login/header/header.component';
 import { ContentComponent } from './login/content/content.component';
+import {LoginDialogComponent} from './login/login-dialog/login-dialog.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,10 +74,14 @@ import { ContentComponent } from './login/content/content.component';
     SalespeopleComponent,
     FileSelectDirective,
     HeaderComponent,
-    ContentComponent
+    ContentComponent,
+    LoginDialogComponent
+
+
   ],
   entryComponents: [
-    ItemDialogComponent
+    ItemDialogComponent,
+    LoginDialogComponent
   ],
   imports: [
 

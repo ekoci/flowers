@@ -12,11 +12,11 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router, private loginService : LoginService) { }
 
 
+
   register = false;
   username = '';
   password = '';
   result = false;
-
   ngOnInit() {
   }
 
@@ -25,13 +25,5 @@ export class LoginComponent implements OnInit {
     console.log('enxhi', this.username)
   }
 
-  onLogin() {
-      this.result = this.loginService.logStatus(this.username, this.password);
-      if (this.result) {
-        this.router.navigateByUrl('/home/general');
-      } else {
-        this.router.navigateByUrl('/login');
-      }
 
-  }
 }
