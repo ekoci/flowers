@@ -22,15 +22,17 @@ export class LoginDialogComponent implements OnInit {
 
   onLogin() {
     this.result = this.loginService.logStatus(this.username, this.password);
-    localStorage.setItem('user', this.result);
+    localStorage.setItem('user', this.result + '');
     console.log(localStorage.getItem('user'));
     if (this.result) {
 
       this.router.navigateByUrl('/home/general');
+      this.dialogRef.close();
     } else {
       this.router.navigateByUrl('/login');
+      this.dialogRef.close();
     }
-    this.dialogRef.close();
+
 
   }
 

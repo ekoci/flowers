@@ -4,7 +4,7 @@ import { FileSelectDirective } from 'ng2-file-upload';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { FormsModule } from '@angular/forms';
+import {FormBuilder, FormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {ScrollDispatchModule} from '@angular/cdk/scrolling';
@@ -60,6 +60,7 @@ import {SalespeopleComponent} from './all-data/salespeople/salespeople.component
 import { HeaderComponent } from './login/header/header.component';
 import { ContentComponent } from './login/content/content.component';
 import {LoginDialogComponent} from './login/login-dialog/login-dialog.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -89,6 +90,7 @@ import {LoginDialogComponent} from './login/login-dialog/login-dialog.component'
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     NoopAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
@@ -132,7 +134,7 @@ import {LoginDialogComponent} from './login/login-dialog/login-dialog.component'
     ScrollDispatchModule,
     ChartsModule
   ],
-  providers: [],
+  providers: [FormBuilder, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
